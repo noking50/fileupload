@@ -1,0 +1,20 @@
+{
+    "name": "noking50/fileupload",
+    "description": "Handle file upload",
+    "keywords": ["laravel"],
+    "authors": [
+        {
+            "name": "noking50",
+            "email": "noking50@gmail.com"
+        }
+    ],
+    "require": {
+        "intervention/image": "^2.3",
+        "anlutro/curl": "^1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Noking50\\FileUpload\\": "src"
+        }
+    }
+}
