@@ -5,7 +5,7 @@ namespace Noking50\FileUpload\Facades;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \App\Classes\FileUpload\FileUpload
+ * @see Noking50\FileUpload\FileUpload
  */
 class FileUpload extends Facade {
 
