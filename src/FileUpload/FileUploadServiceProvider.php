@@ -13,17 +13,28 @@ class FileUploadServiceProvider extends ServiceProvider {
      */
     protected $defer = true;
 
+    public function boot() {
+        $this->loadTranslationsFrom(__DIR__ . '/../lang', 'fileupload');
+        $this->publishes([
+            __DIR__ . '/../config/fileupload.php' => config_path('fileupload.php'),
+            __DIR__ . '/../lang' => resource_path('lang/vendor/fileupload'),
+        ]);
+    }
+
     /**
      * Register the service provider.
      *
      * @return void
      */
     public function register() {
+        $this->mergeConfigFrom(
+                __DIR__ . '/../config/fileupload.php', 'fileupload'
+        );
         $this->app->singleton('fileupload', function () {
             return new FileUpload;
         });
     }
-    
+
     /**
      * Get the services provided by the provider.
      *
