@@ -23,7 +23,7 @@
                 "Noking50\\FileUpload\\FileUploadServiceProvider"
             ],
             "aliases": {
-                "Sitemap": "Noking50\\FileUpload\\Facades\\FileUpload"
+                "FileUpload": "Noking50\\FileUpload\\Facades\\FileUpload"
             }
         }
     }
