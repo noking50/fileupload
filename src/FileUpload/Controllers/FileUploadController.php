@@ -2,7 +2,8 @@
 
 namespace Noking50\FileUpload\Controllers;
 
-use Noking50\FileUpload\FileUpload;
+use Illuminate\Routing\Controller;
+use Noking50\FileUpload\Facades\FileUpload;
 use Request;
 use Config;
 use File;
