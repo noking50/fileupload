@@ -6,13 +6,6 @@ use Illuminate\Support\ServiceProvider;
 
 class FileUploadServiceProvider extends ServiceProvider {
 
-    /**
-     * Indicates if loading of the provider is deferred.
-     *
-     * @var bool
-     */
-    protected $defer = false;
-
     public function boot() {
         $this->loadTranslationsFrom(__DIR__ . '/../lang', 'fileupload');
         $this->publishes([
