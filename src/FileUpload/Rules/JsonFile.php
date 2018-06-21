@@ -36,7 +36,7 @@ class JsonFile implements Rule {
             $this->validate_result = 'format';
             return false;
         }
-        if (count($files) < $this->min) {
+        if ($this->min > 0 && count($files) < $this->min) {
             if (count($files) == 0) {
                 $this->validate_result = 'required';
             } else {
@@ -44,7 +44,7 @@ class JsonFile implements Rule {
             }
             return false;
         }
-        if (count($files) > $this->max) {
+        if ($this->max > 0 && count($files) > $this->max) {
             $this->validate_result = 'max';
             return false;
         }
